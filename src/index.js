@@ -2,7 +2,7 @@ import { render } from 'inferno';
 import { Provider } from 'inferno-redux'; // builds of <Component> in inferno-component
 import { createStore } from 'redux';
 import App from './App';
-import './index.css';
+import './styling/index.css';
 
 var initialstate = {
     name: 'Tom'
