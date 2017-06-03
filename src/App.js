@@ -15,6 +15,12 @@ function createHandlers (dispatch){
     }
 }
 
+function getPropsFromState (state){
+  return {
+    name: state.name
+  }
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,8 +41,4 @@ class App extends Component {
   }
 }
 
-export default connect(state => {
-  return {
-    name: state.name
-  }
-})(App);
+export default connect(getPropsFromState)(App); //export App, all wired and good to go!
