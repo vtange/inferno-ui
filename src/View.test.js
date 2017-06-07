@@ -29,5 +29,9 @@ const mapStateToView = props => <View {...props} />;
 const state$ = scan(reducer, initialState, action$);
 const vTree$ = map(mapStateToView, state$);
 
-// Mount app, track virtual DOM tree updates, & automatically render changes
-render(vTree$, document.getElementById('app'));
+/*------------------------TEST START----------------------------*/
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  render(vTree$, div);
+});
