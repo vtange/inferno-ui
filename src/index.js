@@ -1,10 +1,9 @@
 import { View } from './components';        //User interface
-//import GameEngine from './Engine' // <Provider store={ store }><App /><GameEngine /></Provider>, App overlays over GameEngine, controls control either App or Game
 import './styling/index.css';
 import { createDispatch, createStream, render } from './framework';
 import { map, scan } from 'most';
 import reducer from './reducers';
-import { initialState, COUNT, SUBTITLE, TITLE } from './constants/state';
+import { initialState } from './constants/state';
 
 // Create stream of actions
 const action$ = createStream();

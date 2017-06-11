@@ -13,6 +13,16 @@ import { debounce } from 'lodash/fp'
 const debounce400 = debounce(400)
 const debouncedEditSubtitle = debounce400(editSubtitle)
 
+
+/*
+<View>({ gameState })
+  <Controller className={'controller-div'}>
+    <UIView /> ({ gameState }) //Logo, Title Menu, Overlay Menus, Dialogue, Credits
+    <GameView /> ({ mapState }) //Map, Sprites, Cursor/Main Char Sprite
+  </Controller>
+</View>
+*/
+
 const View = ({ count, subtitle, title }) =>
   <div className={'counter-demo'}>
     <Header title={title} subtitle={subtitle} />
