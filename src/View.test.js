@@ -4,7 +4,7 @@ import './styling/index.css';
 import { createDispatch, createStream, render } from './framework';
 import { map, scan } from 'most';
 import reducer from './reducers';
-import { COUNT, SUBTITLE, TITLE } from './constants/stateKeys';
+import { COUNT, SUBTITLE, TITLE } from './constants/state';
 
 // Create stream of actions
 const action$ = createStream();

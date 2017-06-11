@@ -4,23 +4,13 @@ import './styling/index.css';
 import { createDispatch, createStream, render } from './framework';
 import { map, scan } from 'most';
 import reducer from './reducers';
-import { COUNT, SUBTITLE, TITLE } from './constants/stateKeys';
+import { initialState, COUNT, SUBTITLE, TITLE } from './constants/state';
 
 // Create stream of actions
 const action$ = createStream();
 
 // Generate a dispatch function for emitting actions through actions$
 export const dispatch = createDispatch(action$);
-
-/******************************************************************************
-  Using a plain JS object to hold app state
-*******************************************************************************/
-
-const initialState = {
-  [COUNT]: 0,
-  [SUBTITLE]: 'Counter Demo',
-  [TITLE]: 'Inferno + Most + FP',
-};
 
 // Use mapStateToView if using JSX or just use the View function directly
 const mapStateToView = props => <View {...props} />;

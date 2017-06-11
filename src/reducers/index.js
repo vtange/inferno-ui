@@ -1,6 +1,6 @@
 import { dec, inc } from 'ramda';
 import Actions from '../actions';
-import { COUNT, SUBTITLE, TITLE } from '../constants/stateKeys';
+import { COUNT, SUBTITLE, TITLE } from '../constants/state';
 import {
   INCREMENT,
   DECREMENT,
