@@ -1,5 +1,4 @@
 import Type from 'union-type';
-Type.check = false;
 import { dispatch } from '../'
 import {
   INIT,
@@ -8,6 +7,8 @@ import {
   RESET,
   EDIT_SUBTITLE,
   EDIT_TITLE,
+  KEYDOWN,
+  KEYUP
 } from '../constants/actionTypes'
 
 // Record types
@@ -26,6 +27,8 @@ const Actions = Type({
   [RESET]: DefaultAction,
   [EDIT_SUBTITLE]: ActionWithStringPayload,
   [EDIT_TITLE]: ActionWithStringPayload,
+  [KEYDOWN]: ActionWithStringPayload,
+  [KEYUP]: ActionWithStringPayload
 })
 
 // Action creators
@@ -38,5 +41,9 @@ export const editSubtitle = ({ target }) =>
 export const editTitle = ({ target }) => {
   dispatch(Actions[EDIT_TITLE](target.value))
 }
+export const keyDown = (event) =>
+  dispatch(Actions[KEYDOWN](event.code))
+export const keyUp = (event) =>
+  dispatch(Actions[KEYUP](event.code))
 
 export default Actions
